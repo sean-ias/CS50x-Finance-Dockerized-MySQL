@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<h2>Portfolio</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{row['symbol']}}</td>
+                    <td>{{row['shares']}}</td>
+                    <td>{{row['price']}}</td>
+                    <td>{{row['total']}}</td>
+                </tr>
+            {% endfor %}
+                <tr>
+                    <td colspan="3" align="right">CASH</td>
+                    <td>{{cash}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="right">Total Value</td>
+                    <td><b>{{sum}}</b></td>
+                </tr>
+        </tbody>
+    </table>
+{% endblock %}
