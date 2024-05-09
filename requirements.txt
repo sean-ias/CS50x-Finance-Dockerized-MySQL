@@ -1,0 +1,9 @@
+cs50
+Flask
+flask_sqlalchemy
+pytz
+Requests
+SQLAlchemy
+Werkzeug
+pymysql
+flask_session
